@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+// aws amplify
 import { Amplify, API } from "aws-amplify";
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
+// components
+import RecipeCard from "./components/RecipeCard";
 
 const myAPI = "catherinesrecipes";
 const path = "/recipes";
@@ -25,17 +28,8 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <div>
-        <h1>Recipe List</h1>
-        <ul>
-          {recipes.map((recipe) => (
-            <li key={recipe.customerId}>
-              <strong>{recipe.recipeName}</strong>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div>
+      <RecipeCard recipes={recipes} />
     </div>
   );
 };

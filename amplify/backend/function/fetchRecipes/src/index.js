@@ -22,8 +22,24 @@ const fetchAllRecipes = async () => {
   // Implement your logic to fetch all recipes
   // For example, you might query a database or an API
   const recipes = [
-    { customerId: "1", recipeName: "Recipe 1" },
-    { customerId: "2", recipeName: "Recipe 2" },
+    {
+      recipeId: 1,
+      image: "",
+      recipeName: "Chicken with Artichokes, Spinach and Tomatoes",
+      cookingTime: "1 hour 15 minutes",
+      ingredients: "",
+      course: "main",
+      directions: "",
+    },
+    {
+      recipeId: 2,
+      image: "",
+      recipeName: "Mom`s Turkey Patties",
+      cookingTime: "1 hour 15 minutes",
+      ingredients: "",
+      course: "main",
+      directions: "",
+    },
     // Add more recipes as needed
   ];
   return recipes;
