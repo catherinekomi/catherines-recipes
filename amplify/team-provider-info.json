@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-catherinesrecipes-dev-194153-authRole",
+      "UnauthRoleArn": "arn:aws:iam::467046860463:role/amplify-catherinesrecipes-dev-194153-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::467046860463:role/amplify-catherinesrecipes-dev-194153-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-catherinesrecipes-dev-194153-deployment",
+      "UnauthRoleName": "amplify-catherinesrecipes-dev-194153-unauthRole",
+      "StackName": "amplify-catherinesrecipes-dev-194153",
+      "StackId": "arn:aws:cloudformation:us-west-1:467046860463:stack/amplify-catherinesrecipes-dev-194153/5fb564e0-8297-11ee-9ab7-0630e4231af1",
+      "AmplifyAppId": "d9wtrjsk9cl0u"
+    },
+    "categories": {
+      "function": {
+        "fetchRecipes": {
+          "deploymentBucketName": "amplify-catherinesrecipes-dev-194153-deployment",
+          "s3Key": "amplify-builds/fetchRecipes-617a3976524f436d3266-build.zip"
+        }
+      },
+      "api": {
+        "catherinesrecipes": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d9wtrjsk9cl0u",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
