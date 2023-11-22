@@ -49,12 +49,7 @@ const RecipeCard = (props) => {
 };
 
 RecipeCard.propTypes = {
-  recipes: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      recipeName: PropTypes.string,
-    })
-  ),
+  recipes: PropTypes.array,
 };
 
 export default RecipeCard;

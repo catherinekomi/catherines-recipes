@@ -7,7 +7,7 @@ Amplify.configure(awsExports);
 import RecipeCard from "./components/RecipeCard";
 
 const myAPI = "catherinesrecipes";
-const path = "/recipes";
+const path = "/recipes/1";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
