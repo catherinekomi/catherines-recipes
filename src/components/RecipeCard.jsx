@@ -23,7 +23,7 @@ const RecipeCard = (props) => {
           <div className='md:shrink-0'>
             <img
               className='h-48 w-full object-cover md:h-full md:w-48'
-              src='/img/building.jpg'
+              src=''
               alt=''
             />
           </div>

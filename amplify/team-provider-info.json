@@ -15,7 +15,7 @@
       "function": {
         "fetchRecipes": {
           "deploymentBucketName": "amplify-catherinesrecipes-dev-194153-deployment",
-          "s3Key": "amplify-builds/fetchRecipes-354739646c78306a4a6b-build.zip"
+          "s3Key": "amplify-builds/fetchRecipes-76436850726c47347341-build.zip"
         }
       },
       "api": {
