@@ -2,36 +2,10 @@
 import PropTypes from 'prop-types';
 import IngredientDetails from './IngredientDetails';
 import Directions from './Directions';
-import { useState, useEffect, useMemo } from 'react';
 import image from './salad.jpeg';
 
 const RecipeCard = (props) => {
   const recipes = props.recipes;
-  const directions = useMemo(() => {
-    return recipes.map((recipe) =>
-      Array.isArray(recipe.directions) ? recipe.directions : []
-    );
-  }, [recipes]);
-
-  const [showFullDirections, setShowFullDirections] = useState(false);
-  const toggleDirections = () => {
-    setShowFullDirections(!showFullDirections);
-  };
-
-  const calculateWordCount = (steps) => {
-    return steps.reduce((acc, step) => acc + step.split(/\s+/).length, 0);
-  };
-
-  useEffect(() => {
-    // You can set a threshold for the number of words to determine whether to show the full directions initially
-    const wordThreshold = 50;
-    const totalWords = directions.reduce(
-      (acc, recipeDirections) => acc + calculateWordCount(recipeDirections),
-      0
-    );
-    console.log(totalWords);
-    setShowFullDirections(totalWords <= wordThreshold);
-  }, [directions]);
 
   return (
     <div className='max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl lg:max-w-4xl'>
@@ -41,7 +15,7 @@ const RecipeCard = (props) => {
           className='md:flex rounded-xl overflow-hidden'
         >
           {/* Image on the left */}
-          <div className='md:w-1/2'>
+          <div className='md:w-1/2 p-6'>
             <img
               className='w-full h-32 md:h-auto md:w-full object-cover rounded-lg'
               src={image}
@@ -67,7 +41,11 @@ const RecipeCard = (props) => {
                 <IngredientDetails key={index} ingredient={ingredient} />
               ))}
             <div>
-              <Directions directions={directions} />
+              <p className='mt-2 text-slate-500'>Directions:</p>
+              {Array.isArray(recipe.directions) &&
+                recipe.directions.map((direction, index) => (
+                  <Directions key={index} directions={direction} />
+                ))}
             </div>
           </div>
         </div>
